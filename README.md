@@ -1,6 +1,6 @@
 # ProjectAccount
 
-<img width="786" height="800" alt="Screenshot1" src="https://github.com/user-attachments/assets/5dbdcc8f-a80e-49a0-a141-b424659e12e3" />
+<img width="800" height="444" alt="Screenshot1" src="https://github.com/user-attachments/assets/5dbdcc8f-a80e-49a0-a141-b424659e12e3" />
 <img width="800" height="444" alt="Screenshot2" src="https://github.com/user-attachments/assets/52e1ff87-e8de-4651-b055-0c2e9dfa8a57" />
 
 # About the project
