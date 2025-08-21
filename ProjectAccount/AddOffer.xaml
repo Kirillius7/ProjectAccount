@@ -1,0 +1,206 @@
+﻿<Window x:Class="ProjectAccount.AddOffer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectAccount"
+        mc:Ignorable="d"
+        Title="AddAnnouncment" Height="450" Width="800"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen">
+    <Grid Background="#FF5F91B7">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="111"/>
+            <ColumnDefinition Width="578"/>
+            <ColumnDefinition Width="111"/>
+        </Grid.ColumnDefinitions>
+
+        <Button x:Name="Add" Content="Confirm" Command ="{Binding AddOfferCommand}" HorizontalAlignment="Left" Margin="113,363,0,0" VerticalAlignment="Top" Height="31" Width="86" Background="White" BorderBrush="Black" Grid.Column="1">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Name="buttonBorder" Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="10">
+                        <ContentPresenter HorizontalAlignment="Center"
+                        VerticalAlignment="Center" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="buttonBorder" Property="Background" Value="LightGray" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="buttonBorder" Property="Background" Value="Gray" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button x:Name="ReturnB" Content="Back" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Click="ReturnB_Click" Height="27" Width="68" Background="White" BorderBrush="Black">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Name="buttonBorder" Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="10">
+                        <ContentPresenter HorizontalAlignment="Center"
+                        VerticalAlignment="Center" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="buttonBorder" Property="Background" Value="LightGray" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="buttonBorder" Property="Background" Value="Gray" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button x:Name="search_offer" Content="Search" Command ="{Binding searchAnnouncment}" HorizontalAlignment="Center" Margin="0,170,0,0" VerticalAlignment="Top" Height="31" Width="86" Background="White" BorderBrush="Black">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Name="buttonBorder" Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="10">
+                        <ContentPresenter HorizontalAlignment="Center"
+                        VerticalAlignment="Center" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="buttonBorder" Property="Background" Value="LightGray" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="buttonBorder" Property="Background" Value="Gray" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button x:Name="filter_offers" Content="Filter" HorizontalAlignment="Left" Margin="462,350,0,0" VerticalAlignment="Top" Command ="{Binding filterAnnouncment}" Height="31" Width="86" Background="White" BorderBrush="Black" Grid.Column="1">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Name="buttonBorder" Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="10">
+                        <ContentPresenter HorizontalAlignment="Center"
+                        VerticalAlignment="Center" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="buttonBorder" Property="Background" Value="LightGray" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="buttonBorder" Property="Background" Value="Gray" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button x:Name="Clear" Content="Clear" HorizontalAlignment="Left" Margin="203,363,0,0" VerticalAlignment="Top" Height="31" Width="86" Click="Clear_Click" Background="White" BorderBrush="Black" Grid.Column="1">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Name="buttonBorder" Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="10">
+                        <ContentPresenter HorizontalAlignment="Center"
+                        VerticalAlignment="Center" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="buttonBorder" Property="Background" Value="LightGray" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="buttonBorder" Property="Background" Value="Gray" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <ListView x:Name="Listv" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" ItemsSource="{Binding _announcments}" Margin="0,77,4,205" BorderBrush="Black" Grid.Column="1" >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding id}" Header="ID" Width="35"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding nameprod}" Header="Name" Width="100"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding nameprob}" Header="Problem" Width="100"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding typeprob}" Header="Type problem" Width="125"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding state}" Header="State" Width="100"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding urgency}" Header="Urgency" Width="100"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <ComboBox x:Name="cmbbox1" HorizontalAlignment="Left" Height="24" Margin="274,257,0,0" VerticalAlignment="Top" Text="{Binding typeprod, UpdateSourceTrigger=PropertyChanged}" ToolTip ="{Binding RelativeSource={RelativeSource Mode=Self}, Path = (Validation.Errors)[0].ErrorContent}" Width="158" Grid.Column="1" FontSize="14">
+            <ComboBoxItem Content="Electrician" />
+            <ComboBoxItem Content="Plumber" />
+            <ComboBoxItem Content="Programmer" />
+            <ComboBoxItem Content="Welder" />
+            <ComboBoxItem Content="Mechanic" />
+            <ComboBoxItem Content="Carpenter" />
+            <ComboBoxItem Content="Auto Mechanic" />
+            <ComboBoxItem Content="HVAC Technician" />
+            <ComboBoxItem Content="Locksmith" />
+            <ComboBoxItem Content="Computer Technician" />
+        </ComboBox>
+
+        <ComboBox x:Name="cmbbox2" HorizontalAlignment="Left" Height="24" Margin="46,321,0,0" VerticalAlignment="Top" Text="{Binding state, UpdateSourceTrigger=PropertyChanged}" ToolTip ="{Binding RelativeSource={RelativeSource Mode=Self}, Path = (Validation.Errors)[0].ErrorContent}" Width="140" Grid.Column="1" FontSize="14">
+            <ComboBoxItem Content="Terrible" />
+            <ComboBoxItem Content="Poor" />
+            <ComboBoxItem Content="Fair" />
+            <ComboBoxItem Content="Relatively good" />
+            <ComboBoxItem Content="Good" />
+        </ComboBox>
+
+        <ComboBox x:Name="cmbbox3" HorizontalAlignment="Left" Height="24" Margin="216,321,0,0" VerticalAlignment="Top" Text="{Binding urgency, UpdateSourceTrigger=PropertyChanged}" ToolTip ="{Binding RelativeSource={RelativeSource Mode=Self}, Path = (Validation.Errors)[0].ErrorContent}" Width="140" Grid.Column="1" FontSize="14">
+            <ComboBoxItem Content="Immediate" />
+            <ComboBoxItem Content="Expediate" />
+            <ComboBoxItem Content="On the double" />
+            <ComboBoxItem Content="Important" />
+            <ComboBoxItem Content="Time-insensitive" />
+        </ComboBox>
+
+        <ComboBox x:Name="cmbbox4" HorizontalAlignment="Left" Height="24" Margin="445,257,0,0" VerticalAlignment="Top" Text="{Binding filter, UpdateSourceTrigger=PropertyChanged}" ToolTip ="{Binding RelativeSource={RelativeSource Mode=Self}, Path = (Validation.Errors)[0].ErrorContent}" Width="120" Grid.Column="1" FontSize="14">
+            <ComboBoxItem Content="Name" />
+            <ComboBoxItem Content="Problem" />
+            <ComboBoxItem Content="Type problem" />
+            <ComboBoxItem Content="State" />
+            <ComboBoxItem Content="Urgency" />
+        </ComboBox>
+
+        <TextBox x:Name="txt1" HorizontalAlignment="Left" Height="22" Margin="8,257,0,0" TextWrapping="Wrap" Text="{Binding nameprod, UpdateSourceTrigger=PropertyChanged}" ToolTip ="{Binding RelativeSource={RelativeSource Mode=Self}, Path = (Validation.Errors)[0].ErrorContent}" VerticalAlignment="Top" Width="120" Grid.Column="1" FontSize="14"/>
+
+        <TextBox x:Name="txt2" HorizontalAlignment="Left" Height="22" Margin="141,257,0,0" TextWrapping="Wrap" Text="{Binding nameprob, UpdateSourceTrigger=PropertyChanged}" ToolTip ="{Binding RelativeSource={RelativeSource Mode=Self}, Path = (Validation.Errors)[0].ErrorContent}" VerticalAlignment="Top" Width="120" Grid.Column="1" FontSize="14"/>
+
+        <TextBox x:Name="txt3" HorizontalAlignment="Center" Height="22" Margin="0,130,0,0" TextWrapping="Wrap" Text="{Binding idnew, UpdateSourceTrigger=PropertyChanged}" ToolTip ="{Binding RelativeSource={RelativeSource Mode=Self}, Path = (Validation.Errors)[0].ErrorContent}" VerticalAlignment="Top" Width="86" FontSize="14"/>
+
+        <TextBox x:Name="txt4" HorizontalAlignment="Left" Height="22" Margin="445,310,0,0" TextWrapping="Wrap" Text="{Binding type, UpdateSourceTrigger=PropertyChanged}" ToolTip ="{Binding RelativeSource={RelativeSource Mode=Self}, Path = (Validation.Errors)[0].ErrorContent}" VerticalAlignment="Top" Width="120" Grid.Column="1" FontSize="14"/>
+
+        <Label x:Name="label_id" Content="ID" HorizontalAlignment="Center" Margin="0,101,0,0" VerticalAlignment="Top" Width="24" Foreground="White" Height="29"/>
+
+        <Label x:Name="label_name" Content="Name" HorizontalAlignment="Left" Margin="47,231,0,0" VerticalAlignment="Top" Height="29" Width="42" Grid.Column="1" Foreground="White"/>
+
+        <Label x:Name="label_problem" Content="Problem" Height="29" HorizontalAlignment="Left" Margin="174,231,0,0" VerticalAlignment="Top" Grid.Column="1" Width="54" Foreground="White"/>
+
+        <Label x:Name="label_type_problem" Content="Type" Height="29" HorizontalAlignment="Left" Margin="336,231,0,0" VerticalAlignment="Top" Grid.Column="1" Foreground="White"/>
+
+        <Label x:Name="label_state" Content="State" Height="29" HorizontalAlignment="Left" Margin="98,290,0,0" VerticalAlignment="Top" Grid.Column="1" Width="36" Foreground="White"/>
+
+        <Label x:Name="label_urgency" Content="Urgency" HorizontalAlignment="Left" Margin="259,290,0,0" VerticalAlignment="Top" Grid.Column="1" Width="54" Foreground="White"/>
+
+        <Label x:Name="label_filter" Content="Filter" HorizontalAlignment="Left" Margin="486,231,0,0" VerticalAlignment="Top" Grid.Column="1" Width="38" Foreground="White"/>
+
+        <Label x:Name="label_filter_data" Content="Data" HorizontalAlignment="Left" Margin="488,287,0,0" VerticalAlignment="Top" Grid.Column="1" Width="34" Foreground="White"/>
+
+        <Label x:Name="main_label" Content="Add announcment" HorizontalAlignment="Center" Margin="0,24,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontSize="20" Grid.Column="1"/>
+
+    </Grid>
+</Window>

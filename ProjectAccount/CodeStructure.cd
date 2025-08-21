@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ProjectAccount.ModelManager1" Collapsed="true">
+    <Position X="1" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CgAAAAAABAAAAQAgAAAkAAAAIDAABAAQAAIABAAAEAA=</HashCode>
+      <FileName>ModelManager1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectAccount.ModelWorker2" Collapsed="true">
+    <Position X="2.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAABAAABQAAAAAkAAAAIEAABAAwAAIgBAAAAQA=</HashCode>
+      <FileName>ModelWorker2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectAccount.AddOfferViewModel" Collapsed="true">
+    <Position X="8" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgQAAKAEgCEAQYBAIAAmAKMsiABAqQMAAIQAAAlMAQ=</HashCode>
+      <FileName>AddOfferViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProjectAccount.Admin_IdentificationVM" Collapsed="true">
+    <Position X="4.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQIAABCMAAABAAIAABIIAggAAAAIAAAAIAAhMQA=</HashCode>
+      <FileName>Admin_IdentificationVM.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProjectAccount.AdminListOffersVM" Collapsed="true">
+    <Position X="1" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgQAQAAMACEAQYBAIAAkAAIsAERAqAYAAAAIAAlMAA=</HashCode>
+      <FileName>AdminListOffersVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectAccount.AdminWorkingSpaceVM" Collapsed="true">
+    <Position X="5.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgQAAAAEACEAAYBAIAAkAAIsAABAqAIAAAAAAAlMAA=</HashCode>
+      <FileName>AdminWorkingSpaceVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectAccount.AnnouncmentsViewModel" Collapsed="true">
+    <Position X="3.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgQAAAAMACEACQBAIAAkAAI8EAJAqAAAAABIABlMAI=</HashCode>
+      <FileName>AnnouncmentsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Object" Collapsed="true">
+    <Position X="6.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Prism.Mvvm.BindableBase" Collapsed="true">
+    <Position X="6.5" Y="3" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ProjectAccount.EditOfferViewModel" Collapsed="true">
+    <Position X="10" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIgQAAKAEgCEAAQBAIBAmAKMsiABAqAMAAIAAAAlMgQ=</HashCode>
+      <FileName>EditOfferViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProjectAccount.RemoveOfferViewModel" Collapsed="true">
+    <Position X="12.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABgQAAKAEACEAAQFAABAkAAIsgABAqAIAAAAAAAlMgE=</HashCode>
+      <FileName>RemoveOfferViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProjectAccount.Worker_IdentificationVM" Collapsed="true">
+    <Position X="6.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQIAAACMAAABAAIAABIAAggAAAAIAAAAIAEhMQA=</HashCode>
+      <FileName>Worker_IdentificationVM.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProjectAccount.Worker_RegistrationVM" Collapsed="true">
+    <Position X="8" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAIAAACECAABAAIAAAIIAgAGAAAoAAABIAEhMQA=</HashCode>
+      <FileName>Worker_RegistrationVM.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProjectAccount.WorkersDealsVM" Collapsed="true">
+    <Position X="12.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgQAAAAEACEAAYBAIAAkAAIoAABAqAIAAAAIAAlMAA=</HashCode>
+      <FileName>WorkersDealsVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectAccount.WorkListOffersVM" Collapsed="true">
+    <Position X="1" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgQAAAAEACEAAQBAYAAkAAI8EAJAqAAQAABIABlMAA=</HashCode>
+      <FileName>WorkListOffersVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectAccount.AddOffer" Collapsed="true">
+    <Position X="1.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAIAABAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>AddOffer.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProjectAccount.AdminListOffers" Collapsed="true">
+    <Position X="3.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIGACAAIAAAAIAAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>AdminListOffers.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProjectAccount.AdminLogIn" Collapsed="true">
+    <Position X="5.5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAKAA=</HashCode>
+      <FileName>AdminLogIn.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProjectAccount.AdminWindow" Collapsed="true">
+    <Position X="7.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAABAAEAAAAAICABAAAAAAAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>AdminWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProjectAccount.AdminWorkingSpace" Collapsed="true">
+    <Position X="10.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIBAIAAAAAAAAAAIAAAAAAAAAAEAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>AdminWorkingSpace.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProjectAccount.Announcments" Collapsed="true">
+    <Position X="13" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIEACAAAAAAQIAAAAAAAAAAAAAAQAAAAAoAAAAAA=</HashCode>
+      <FileName>Announcments.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProjectAccount.Diagrams" Collapsed="true">
+    <Position X="9.5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAIAAAAAAAAAAAAAAAAAEEAAAAAAAA=</HashCode>
+      <FileName>Diagrams.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProjectAccount.EditOffer" Collapsed="true">
+    <Position X="12.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAIAABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EditOffer.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProjectAccount.Chart" Collapsed="true">
+    <Position X="1.5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAgAAAAAAAAIAAAAAAAAAAAAAAAAAEEAAAAAAAA=</HashCode>
+      <FileName>Chart.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProjectAccount.RemoveOffer" Collapsed="true">
+    <Position X="3.5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAIAABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RemoveOffer.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProjectAccount.WorkerLogIn" Collapsed="true">
+    <Position X="1.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAACAIAAAAAAAAAAAAAAAAAAAAAAAAKAA=</HashCode>
+      <FileName>WorkerLogIn.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProjectAccount.WorkersDeals" Collapsed="true">
+    <Position X="13" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>WorkersDeals.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProjectAccount.WorkerSignUp" Collapsed="true">
+    <Position X="11.25" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>WorkerSignUp.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProjectAccount.WorkerWindow" Collapsed="true">
+    <Position X="7.5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAIAAAAAAAAAgYAAAAAAAAAAAAAAAAAAAAIAEAAAA=</HashCode>
+      <FileName>WorkerWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProjectAccount.WorkListOffers" Collapsed="true">
+    <Position X="5.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAACAAIAAAAIAABAAAAAQAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>WorkListOffers.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.Windows.Window" Collapsed="true">
+    <Position X="7.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ProjectAccount.Announcment" Collapsed="true">
+    <Position X="9.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAoAAAAAAAAAAAACAAAAAAAAEAAIAAAAAAgA=</HashCode>
+      <FileName>Announcment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectAccount.Connection" Collapsed="true">
+    <Position X="11.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAARQAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Connection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectAccount.RelayCommand" Collapsed="true">
+    <Position X="13.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAQEACAAQAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RelayCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProjectAccount.TableAn" Collapsed="true">
+    <Position X="13.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAQAAAAIAAAAAAAABAAAA=</HashCode>
+      <FileName>TableAn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectAccount.Workers_Offers" Collapsed="true">
+    <Position X="1" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAsAAIAAAAAAAAACAAAAAAAAEAAIAAAAAAgA=</HashCode>
+      <FileName>Workers_Offers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectAccount.Deals" Collapsed="true">
+    <Position X="15" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAQAoAAAAQAAAAAAACAAAAAAAAEACIAAQAAAgA=</HashCode>
+      <FileName>Deals.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
