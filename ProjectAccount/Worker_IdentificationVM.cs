@@ -16,19 +16,6 @@ namespace ProjectAccount
     {
         public RelayCommand IdentifyUserCommand { get; set; }
 
-        //private string _name;
-        //[Required(ErrorMessage = "Name is required!")]
-        //public string name
-        //{
-        //    get { return _name; }
-
-        //    set
-        //    {
-        //        _name = value;
-        //        Validate(nameof(name), value);
-        //    }
-        //}
-
         private string _login;
         [Required(ErrorMessage = "Login is required!")]
         public string login
