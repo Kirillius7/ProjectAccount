@@ -38,5 +38,5 @@ The purpose of this project is to develop a software application for managing re
 - **Posting Announcements (Worker):** submit messages about services you can provide.
 - **Processing Requests:** as an admin, accept service requests; as a worker, wait for your request to be accepted.
 
-# Contacts:
+# Contacts
 https://www.linkedin.com/in/kyrylo-popov-ab160536a/
