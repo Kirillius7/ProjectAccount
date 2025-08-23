@@ -66,16 +66,16 @@ namespace ProjectAccount
             this.Close();
         }
 
-        private void pass_PasswordChanged(object sender, RoutedEventArgs e)
-        {
-            if(pass1.Text != pass.Password)
-                pass1.Text = pass.Password;
-        }
-        private void pass1_PasswordChanged(object sender, RoutedEventArgs e)
-        {
-            if (pass1.Text != pass.Password)
-                pass.Password = pass1.Text;
-        }
+        //private void pass_PasswordChanged(object sender, RoutedEventArgs e)
+        //{
+        //    if(pass1.Text != pass.Password)
+        //        pass1.Text = pass.Password;
+        //}
+        //private void pass1_PasswordChanged(object sender, RoutedEventArgs e)
+        //{
+        //    if (pass1.Text != pass.Password)
+        //        pass.Password = pass1.Text;
+        //}
         private void show_password_Click(object sender, RoutedEventArgs e)
         {
             pass1.Visibility = Visibility.Visible;

@@ -14,11 +14,6 @@ namespace ProjectAccount
 {
     public class AdminWorkingSpaceVM : BindableBase
     {
-        public DelegateCommand updateData =>
-            UpdateData ?? (UpdateData = new DelegateCommand(Convert));
-
-        private DelegateCommand UpdateData;
-
         private DelegateCommand SearchAnnouncment;
         public DelegateCommand searchAnnouncment =>
             SearchAnnouncment ?? (SearchAnnouncment = new DelegateCommand(Convert));
@@ -45,7 +40,6 @@ namespace ProjectAccount
             set
             {
                 _filter = value;
-                Validate(nameof(filter), value);
             }
         }
         private string _type;
@@ -55,7 +49,6 @@ namespace ProjectAccount
             set
             {
                 _type = value;
-                Validate(nameof(type), value);
             }
         }
         private List<Deals> announcments;
@@ -73,66 +66,8 @@ namespace ProjectAccount
             set
             {
                 _idnew = value;
-                Validate(nameof(idnew), value);
             }
         }
-
-        public bool HasErrors => _propertyError.Count > 0;
-
-        public AdminWorkingSpaceVM()
-        {
-            //_announcments = new List<Deals>(ModelManager1.ReturnDeals(_idnew));
-            _announcments = new List<Deals>(ModelManager1.SearchDeal(_idnew));
-        }
-
-        public event EventHandler<DataErrorsChangedEventArgs>? ErrorsChanged;
-
-        private readonly Dictionary<string, List<string>> _propertyError = new Dictionary<string, List<string>>();
-        public IEnumerable GetErrors(string propertyName)
-        {
-            if (_propertyError.ContainsKey(propertyName))
-                return _propertyError[propertyName];
-            else
-                return Enumerable.Empty<string>();
-        }
-
-        public void AddError(string propertyName, string ErrorName)
-        {
-            if (_propertyError.ContainsKey(propertyName))
-            {
-                _propertyError.Add(propertyName, new List<string>());
-            }
-
-            _propertyError[propertyName].Add(ErrorName);
-        }
-        private void OnErrorsChanged(string propertyName)
-        {
-            ErrorsChanged?.Invoke(this, new DataErrorsChangedEventArgs(propertyName));
-        }
-
-        public void Validate(string propertyName, object propertyValue)
-        {
-            var results = new List<ValidationResult>();
-            Validator.TryValidateProperty(propertyValue, new ValidationContext(this) { MemberName = propertyName }, results);
-            try
-            {
-                if (results.Any())
-                {
-                    _propertyError.Add(propertyName, results.Select(r => r.ErrorMessage).ToList());
-                    ErrorsChanged?.Invoke(this, new DataErrorsChangedEventArgs(propertyName));
-                }
-                else
-                {
-                    _propertyError.Remove(propertyName);
-                    ErrorsChanged?.Invoke(this, new DataErrorsChangedEventArgs(propertyName));
-                }
-            }
-            catch
-            {
-                MessageBox.Show("Fill the field!");
-            }
-        }
-
         public static void CatchException(Exception ex)
         {
             MessageBox.Show(ex.Message);

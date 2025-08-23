@@ -80,7 +80,6 @@ namespace ProjectAccount
             set
             {
                 _filter = value;
-                Validate(nameof(filter), value);
             }
         }
         private string _type;
@@ -90,7 +89,6 @@ namespace ProjectAccount
             set
             {
                 _type = value;
-                Validate(nameof(type), value);
             }
         }
         private string _idnew;
@@ -100,7 +98,6 @@ namespace ProjectAccount
             set
             {
                 _idnew = value;
-                Validate(nameof(idnew), value);
             }
         }
 
@@ -108,87 +105,7 @@ namespace ProjectAccount
         {
             //_announcments = new List<AnnouncmentOffers>(ModelManager1.ReturnOffers(_idnew));
             _announcments = new List<AnnouncmentOffers>(ModelManager1.SearchOffer(_idnew));
-        }
-        private bool CanIdentify(object obj)
-        {
-            //return true;
-            return Validator.TryValidateObject(this, new ValidationContext(this), null);
-        }
-
-        public bool HasErrors => _propertyError.Count > 0;
-        public event EventHandler<DataErrorsChangedEventArgs>? ErrorsChanged;
-
-        private readonly Dictionary<string, List<string>> _propertyError = new Dictionary<string, List<string>>();
-        public IEnumerable GetErrors(string propertyName)
-        {
-            if (_propertyError.ContainsKey(propertyName))
-                return _propertyError[propertyName];
-            else
-                return Enumerable.Empty<string>();
-        }
-
-        public void AddError(string propertyName, string ErrorName)
-        {
-            if (_propertyError.ContainsKey(propertyName))
-            {
-                _propertyError.Add(propertyName, new List<string>());
-            }
-
-            _propertyError[propertyName].Add(ErrorName);
-        }
-        private void OnErrorsChanged(string propertyName)
-        {
-            ErrorsChanged?.Invoke(this, new DataErrorsChangedEventArgs(propertyName));
-        }
-
-        public void Validate(string propertyName, object propertyValue)
-        {
-            var results = new List<ValidationResult>();
-            Validator.TryValidateProperty(propertyValue, new ValidationContext(this) { MemberName = propertyName }, results);
-            try
-            {
-                if (results.Any())
-                {
-                    _propertyError.Add(propertyName, results.Select(r => r.ErrorMessage).ToList());
-                    ErrorsChanged?.Invoke(this, new DataErrorsChangedEventArgs(propertyName));
-                }
-                else
-                {
-                    _propertyError.Remove(propertyName);
-                    ErrorsChanged?.Invoke(this, new DataErrorsChangedEventArgs(propertyName));
-                }
-            }
-            catch
-            {
-                MessageBox.Show("Fill the field!");
-            }
-        }
-
-        //public static void Deal_Success()
-        //{
-        //    MessageBox.Show("New deal has been successfully added!");
-        //}
-
-        //public static void DeleteAnnouncment_Success()
-        //{
-        //    MessageBox.Show("The table of announcments has been updated!");
-        //}
-
-        //public static void wDataUpdate_Success()
-        //{
-        //    MessageBox.Show("The table of workers has been updated!");
-        //}
-
-        //public static void DeleteOffer_Success()
-        //{
-        //    MessageBox.Show("The table of offers has been updated!");
-        //}
-
-        //public static void DeleteOffer_Problem()
-        //{
-        //    MessageBox.Show("Failed to update the table of offers!");
-        //}
-
+        }    
         public static void wDataUpdate_Problem()
         {
             MessageBox.Show("Failed to update the table of workers!");

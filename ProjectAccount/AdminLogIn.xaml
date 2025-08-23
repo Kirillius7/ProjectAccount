@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
         xmlns:local="clr-namespace:ProjectAccount"
         d:DataContext="{d:DesignInstance Type=local:Admin_IdentificationVM}"
         mc:Ignorable="d"
@@ -90,8 +91,15 @@
         <Label x:Name="label_password" Content="Password" HorizontalAlignment="Center" Margin="0,201,0,0" VerticalAlignment="Top" Grid.Column="1" RenderTransformOrigin="0.5,0.5" Width="72" Background="{x:Null}" Foreground="White" FontSize="14"/>
 
         <Label x:Name="main_label" Content="Authorization" HorizontalAlignment="Center" Margin="0,46,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontSize="20" Grid.Column="1"/>
-        <PasswordBox x:Name="pass" PasswordChanged="pass_PasswordChanged" HorizontalAlignment="Left" Margin="11,230,0,0" VerticalAlignment="Top" Height ="22" Width="180" PasswordChar="●" Grid.Column="1"/>
-        <TextBox x:Name="pass1" TextChanged="pass1_PasswordChanged" Text="{Binding pswrd, UpdateSourceTrigger=PropertyChanged}" ToolTip ="{Binding RelativeSource={RelativeSource Mode=Self}, Path = (Validation.Errors)[0].ErrorContent}" HorizontalAlignment="Left" Margin="11,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height ="22" Width="180" HorizontalScrollBarVisibility="Visible" Grid.Column="1" FontSize="14" Visibility="Hidden"/>
+        <!-- <PasswordBox x:Name="pass" PasswordChanged="pass_PasswordChanged"> -->
+        <PasswordBox x:Name="pass" HorizontalAlignment="Left" Margin="11,230,0,0" VerticalAlignment="Top" Height ="22" Width="180" PasswordChar="●" Grid.Column="1">
+            <i:Interaction.Behaviors>
+                <local:PasswordBoxBehavior 
+            BoundPassword="{Binding pswrd, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            </i:Interaction.Behaviors>
+        </PasswordBox>
+        <!-- <TextBox x:Name="pass1" TextChanged="pass1_PasswordChanged"> -->
+        <TextBox x:Name="pass1" Text="{Binding pswrd, UpdateSourceTrigger=PropertyChanged}" ToolTip ="{Binding RelativeSource={RelativeSource Mode=Self}, Path = (Validation.Errors)[0].ErrorContent}" HorizontalAlignment="Left" Margin="11,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height ="22" Width="180" HorizontalScrollBarVisibility="Visible" Grid.Column="1" FontSize="14" Visibility="Hidden"/>
         <Button x:Name="show_password" Content="" HorizontalAlignment="Left" Margin="0,232,0,0" VerticalAlignment="Top" Width="26" Click="show_password_Click" BorderBrush="White" RenderTransformOrigin="-8.115,-2.202" Grid.Column="2">
             <Button.Background>
                 <ImageBrush ImageSource="/OpenEye.jpg"/>
@@ -117,11 +125,11 @@
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Border Name="buttonBorder" Background="{TemplateBinding Background}"
-    BorderBrush="{TemplateBinding BorderBrush}"
-    BorderThickness="{TemplateBinding BorderThickness}"
-    CornerRadius="10">
-                        <ContentPresenter HorizontalAlignment="Center"
-    VerticalAlignment="Center" />
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="10">
+                      <ContentPresenter HorizontalAlignment="Center"
+                        VerticalAlignment="Center" />
                     </Border>
 
                 </ControlTemplate>

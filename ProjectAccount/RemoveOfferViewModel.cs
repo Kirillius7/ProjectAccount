@@ -18,10 +18,10 @@ namespace ProjectAccount
         private DelegateCommand SearchAnnouncment;
         public DelegateCommand searchAnnouncment =>
             SearchAnnouncment ?? (SearchAnnouncment = new DelegateCommand(Convert1));
-        public DelegateCommand updateData =>
-            UpdateData ?? (UpdateData = new DelegateCommand(Convert1));
+        //public DelegateCommand updateData =>
+        //    UpdateData ?? (UpdateData = new DelegateCommand(Convert1));
 
-        private DelegateCommand UpdateData;
+        //private DelegateCommand UpdateData;
         public void Convert1()
         {
             //_announcments = new List<Announcment>(ModelManager1.ReturnProposals(_idnew));
@@ -76,18 +76,6 @@ namespace ProjectAccount
                 Validate(nameof(idnew), value);
             }
         }
-        //public int _id;
-        //[Required(ErrorMessage = "Name is required!")]
-        //public int id
-        //{
-        //    get { return _id; }
-
-        //    set
-        //    {
-        //        _id = value;
-        //        Validate(nameof(id), value);
-        //    }
-        //}
         public string _id;
         [Required(ErrorMessage = "Name is required!")]
         public string id
@@ -155,15 +143,15 @@ namespace ProjectAccount
                 return Enumerable.Empty<string>();
         }
 
-        public void AddError(string propertyName, string ErrorName)
-        {
-            if (_propertyError.ContainsKey(propertyName))
-            {
-                _propertyError.Add(propertyName, new List<string>());
-            }
+        //public void AddError(string propertyName, string ErrorName)
+        //{
+        //    if (_propertyError.ContainsKey(propertyName))
+        //    {
+        //        _propertyError.Add(propertyName, new List<string>());
+        //    }
 
-            _propertyError[propertyName].Add(ErrorName);
-        }
+        //    _propertyError[propertyName].Add(ErrorName);
+        //}
         private void OnErrorsChanged(string propertyName)
         {
             ErrorsChanged?.Invoke(this, new DataErrorsChangedEventArgs(propertyName));
@@ -176,16 +164,25 @@ namespace ProjectAccount
             try
             {
 
+                //if (results.Any())
+                //{
+                //    _propertyError.Add(propertyName, results.Select(r => r.ErrorMessage).ToList());
+                //    ErrorsChanged?.Invoke(this, new DataErrorsChangedEventArgs(propertyName));
+                //}
+                //else
+                //{
+                //    _propertyError.Remove(propertyName);
+                //    ErrorsChanged?.Invoke(this, new DataErrorsChangedEventArgs(propertyName));
+                //}
                 if (results.Any())
                 {
-                    _propertyError.Add(propertyName, results.Select(r => r.ErrorMessage).ToList());
-                    ErrorsChanged?.Invoke(this, new DataErrorsChangedEventArgs(propertyName));
+                    _propertyError[propertyName] = results.Select(r => r.ErrorMessage).ToList();
                 }
                 else
                 {
                     _propertyError.Remove(propertyName);
-                    ErrorsChanged?.Invoke(this, new DataErrorsChangedEventArgs(propertyName));
                 }
+                OnErrorsChanged(propertyName);
             }
             catch
             {

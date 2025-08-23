@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
         xmlns:local="clr-namespace:ProjectAccount"
         mc:Ignorable="d"
         Title="WorkerLogIn" Height="450" Width="800"
@@ -111,7 +112,13 @@
         <Label x:Name="label_password" Content="Password" HorizontalAlignment="Center" Margin="0,200,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.469,0.025" Grid.Column="1" Background="{x:Null}" FontSize="14" Foreground="White"/>
 
         <Label x:Name="main_label" Content="Authorization" HorizontalAlignment="Center" Margin="0,46,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontSize="20" Grid.Column="1"/>
-        <PasswordBox x:Name="pass" PasswordChanged="pass_PasswordChanged" HorizontalAlignment="Center" Margin="0,230,0,0" VerticalAlignment="Top" Height ="22" Width="180" PasswordChar="●" Grid.Column="1"/>
+        <!-- <PasswordBox x:Name="pass" PasswordChanged="pass_PasswordChanged"> -->
+        <PasswordBox x:Name="pass" HorizontalAlignment="Center" Margin="0,230,0,0" VerticalAlignment="Top" Height ="22" Width="180" PasswordChar="●" Grid.Column="1">
+            <i:Interaction.Behaviors>
+                <local:PasswordBoxBehavior 
+            BoundPassword="{Binding pswrd, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            </i:Interaction.Behaviors>
+        </PasswordBox>
         <Button x:Name="show_password" Content="" HorizontalAlignment="Left" Margin="0,232,0,0" VerticalAlignment="Top" Width="26" Click="show_password_Click" BorderBrush="White" RenderTransformOrigin="-8.115,-2.202" Grid.Column="2">
             <Button.Background>
                 <ImageBrush ImageSource="/OpenEye.jpg"/>
@@ -129,7 +136,8 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <TextBox x:Name="pass1" TextChanged="pass1_PasswordChanged" Text="{Binding pswrd, UpdateSourceTrigger=PropertyChanged}" ToolTip ="{Binding (Validation.Errors)[0].ErrorContent, RelativeSource={RelativeSource Mode=Self}}" HorizontalAlignment="Center" Margin="0,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height ="22" Width="180" HorizontalScrollBarVisibility="Visible" Grid.Column="1" FontSize="14" Visibility="Hidden"/>
+        <!-- <TextBox x:Name="pass1" TextChanged="pass1_PasswordChanged"> -->
+        <TextBox x:Name="pass1" Text="{Binding pswrd, UpdateSourceTrigger=PropertyChanged}" ToolTip ="{Binding (Validation.Errors)[0].ErrorContent, RelativeSource={RelativeSource Mode=Self}}" HorizontalAlignment="Center" Margin="0,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height ="22" Width="180" HorizontalScrollBarVisibility="Visible" Grid.Column="1" FontSize="14" Visibility="Hidden"/>
         <Button x:Name="hide_password" Content="" HorizontalAlignment="Left" Margin="0,232,0,0" VerticalAlignment="Top" Width="26" Click="hide_password_Click" BorderBrush="White" Grid.Column="2" Visibility="Hidden">
             <Button.Background>
                 <ImageBrush ImageSource="/ClosedEye.jpg"/>

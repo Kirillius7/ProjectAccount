@@ -36,15 +36,38 @@ namespace ProjectAccount
             BoundPassword = AssociatedObject.Password;
         }
 
+        //private static void OnBoundPasswordChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        //{
+        //    var behavior = d as PasswordBoxBehavior;
+        //    var passwordBox = behavior?.AssociatedObject;
+
+        //    if (passwordBox == null)
+        //        return;
+
+        //    var newPassword = (string)e.NewValue;
+
+        //    if (passwordBox.Password != newPassword)
+        //    {
+        //        passwordBox.Password = newPassword;
+        //    }
+        //}
         private static void OnBoundPasswordChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             var behavior = d as PasswordBoxBehavior;
             var passwordBox = behavior?.AssociatedObject;
-
-            if (passwordBox == null)
-                return;
+            if (passwordBox == null) return;
 
             var newPassword = (string)e.NewValue;
+
+            if (!passwordBox.IsLoaded)
+            {
+                passwordBox.Loaded += (s, args) =>
+                {
+                    if (passwordBox.Password != newPassword)
+                        passwordBox.Password = newPassword;
+                };
+                return;
+            }
 
             if (passwordBox.Password != newPassword)
             {

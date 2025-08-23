@@ -89,15 +89,16 @@ namespace ProjectAccount
             hide_password.Visibility = Visibility.Hidden;
             show_password.Visibility = Visibility.Visible;
         }
-        private void pass_PasswordChanged(object sender, RoutedEventArgs e)
-        {
-            if (pass1.Text != pass.Password)
-                pass1.Text = pass.Password;
-        }
-        private void pass1_PasswordChanged(object sender, RoutedEventArgs e)
-        {
-            if (pass1.Text != pass.Password)
-                pass.Password = pass1.Text;
-        }
+
+        //private void pass_PasswordChanged(object sender, RoutedEventArgs e)
+        //{
+        //    if (pass1.Text != pass.Password)
+        //        pass1.Text = pass.Password;
+        //}
+        //private void pass1_PasswordChanged(object sender, RoutedEventArgs e)
+        //{
+        //    if (pass1.Text != pass.Password)
+        //        pass.Password = pass1.Text;
+        //}
     }
 }

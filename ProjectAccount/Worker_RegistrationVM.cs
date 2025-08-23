@@ -101,15 +101,15 @@ namespace ProjectAccount
                 return Enumerable.Empty<string>();
         }
 
-        public void AddError(string propertyName, string ErrorName)
-        {
-            if (_propertyError.ContainsKey(propertyName))
-            {
-                _propertyError.Add(propertyName, new List<string>());
-            }
+        //public void AddError(string propertyName, string ErrorName)
+        //{
+        //    if (_propertyError.ContainsKey(propertyName))
+        //    {
+        //        _propertyError.Add(propertyName, new List<string>());
+        //    }
 
-            _propertyError[propertyName].Add(ErrorName);
-        }
+        //    _propertyError[propertyName].Add(ErrorName);
+        //}
         private void OnErrorsChanged(string propertyName)
         {
             ErrorsChanged?.Invoke(this, new DataErrorsChangedEventArgs(propertyName));
@@ -121,16 +121,25 @@ namespace ProjectAccount
             Validator.TryValidateProperty(propertyValue, new ValidationContext(this) { MemberName = propertyName }, results);
             try
             {
+                //if (results.Any())
+                //{
+                //    _propertyError.Add(propertyName, results.Select(r => r.ErrorMessage).ToList());
+                //    ErrorsChanged?.Invoke(this, new DataErrorsChangedEventArgs(propertyName));
+                //}
+                //else
+                //{
+                //    _propertyError.Remove(propertyName);
+                //    ErrorsChanged?.Invoke(this, new DataErrorsChangedEventArgs(propertyName));
+                //}
                 if (results.Any())
                 {
-                    _propertyError.Add(propertyName, results.Select(r => r.ErrorMessage).ToList());
-                    ErrorsChanged?.Invoke(this, new DataErrorsChangedEventArgs(propertyName));
+                    _propertyError[propertyName] = results.Select(r => r.ErrorMessage).ToList();
                 }
                 else
                 {
                     _propertyError.Remove(propertyName);
-                    ErrorsChanged?.Invoke(this, new DataErrorsChangedEventArgs(propertyName));
                 }
+                OnErrorsChanged(propertyName);
             }
             catch
             {
