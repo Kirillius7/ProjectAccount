@@ -26,7 +26,6 @@ namespace ProjectAccount
         private DelegateCommand UpdateData;
         public void Convert()
         {
-            //_announcments = new List<AnnouncmentOffers>(ModelManager1.ReturnOffers(_idnew));
             _announcments = new List<AnnouncmentOffers>(ModelManager1.SearchOffer(_idnew));
         }
 
@@ -36,7 +35,6 @@ namespace ProjectAccount
 
         public void Convert2()
         {
-            //_announcments = new List<AnnouncmentOffers>(ModelManager1.ReturnOffers2(_filter, _type));
             _announcments = new List<AnnouncmentOffers>(ModelManager1.FilterOffers(_filter, _type));
 
         }
@@ -103,7 +101,6 @@ namespace ProjectAccount
 
         public AdminListOffersVM()
         {
-            //_announcments = new List<AnnouncmentOffers>(ModelManager1.ReturnOffers(_idnew));
             _announcments = new List<AnnouncmentOffers>(ModelManager1.SearchOffer(_idnew));
         }    
         public static void wDataUpdate_Problem()

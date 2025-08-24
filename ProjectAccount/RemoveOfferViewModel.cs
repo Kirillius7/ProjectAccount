@@ -18,13 +18,9 @@ namespace ProjectAccount
         private DelegateCommand SearchAnnouncment;
         public DelegateCommand searchAnnouncment =>
             SearchAnnouncment ?? (SearchAnnouncment = new DelegateCommand(Convert1));
-        //public DelegateCommand updateData =>
-        //    UpdateData ?? (UpdateData = new DelegateCommand(Convert1));
 
-        //private DelegateCommand UpdateData;
         public void Convert1()
         {
-            //_announcments = new List<Announcment>(ModelManager1.ReturnProposals(_idnew));
             _announcments = new List<Announcment>(ModelManager1.SearchAnnouncment(_idnew));
 
         }
@@ -34,7 +30,6 @@ namespace ProjectAccount
 
         public void Convert2()
         {
-            //_announcments = new List<Announcment>(ModelManager1.ReturnProposals2(_filter, _type));
             _announcments = new List<Announcment>(ModelManager1.FilterAnnouncments(_filter, _type));
         }
         private string _filter;
@@ -66,7 +61,6 @@ namespace ProjectAccount
         }
 
         private string _idnew;
-        //[Required(ErrorMessage = "_idnew is required!")]
         public string idnew
         {
             get => _idnew;
@@ -93,7 +87,6 @@ namespace ProjectAccount
         public RemoveOfferViewModel()
         {
             RemoveOfferCommand = new RelayCommand(AddCmmdt, CanAddCmdt);
-            //_announcments = new List<Announcment>(ModelManager1.ReturnProposals(_idnew));
             _announcments = new List<Announcment>(ModelManager1.SearchAnnouncment(_idnew));
 
         }
@@ -130,10 +123,6 @@ namespace ProjectAccount
             }
         }
 
-        //public void Login(string login)
-        //{
-        //    us_login = login;
-        //}
         private readonly Dictionary<string, List<string>> _propertyError = new Dictionary<string, List<string>>();
         public IEnumerable GetErrors(string propertyName)
         {

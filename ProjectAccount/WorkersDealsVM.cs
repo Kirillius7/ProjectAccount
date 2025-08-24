@@ -16,7 +16,6 @@ namespace ProjectAccount
     {
         private string _login;
 
-        //private DelegateCommand UpdateData;
 
         private DelegateCommand SearchAnnouncment;
         public DelegateCommand searchAnnouncment =>
@@ -24,7 +23,6 @@ namespace ProjectAccount
 
         public void Convert()
         {
-            //_announcments = new List<Deals>(ModelManager1.ReturnDeals(_idnew));
             _announcments = new List<Deals>(ModelWorker2.SearchDeal(_login, _idnew));
 
         }
@@ -34,7 +32,6 @@ namespace ProjectAccount
 
         public void Convert2()
         {
-            //_announcments = new List<Deals>(ModelManager1.ReturnDeals2(_filter, _type));
             _announcments = new List<Deals>(ModelWorker2.FilterDeals(_login, _filter, _type));
         }
         private string _filter;
@@ -74,15 +71,10 @@ namespace ProjectAccount
         }
         public WorkersDealsVM(string login)
         {
-            //_announcments = new List<Deals>(ModelManager1.ReturnDeals(_idnew));
             _announcments = new List<Deals>(ModelWorker2.SearchDeal(login, _idnew));
             _login = login;
         }
       
-        //public void Login(string login)
-        //{
-        //    us_login = login;
-        //}
         
         public static void CatchException(Exception ex)
         {
