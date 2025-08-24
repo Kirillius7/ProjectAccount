@@ -16,20 +16,13 @@ namespace ProjectAccount
 {
     public class WorkListOffersVM : BindableBase
     {
-        //public ICommand ShowWindowWorkerAnnouncmentCommand { get; set; }
-        //public ObservableCollection<Announcment> Announcments { get; set; }
         private string _login;
         public WorkListOffersVM(string login)
         {
-            //_announcments = ModelWorker2.ReturnListOffers(login, idnew);
             _announcments = ModelWorker2.SearchOffer(login, idnew);
             _login = login;
-            //ShowWindowWorkerAnnouncmentCommand = new RelayCommand(ShowWindow, CanShowWindow);
         }
-        //public DelegateCommand updateData =>
-        //        UpdateData ?? (UpdateData = new DelegateCommand(Convert));
 
-        //private DelegateCommand UpdateData;
         private DelegateCommand SearchAnnouncment;
         public DelegateCommand searchAnnouncment =>
             SearchAnnouncment ?? (SearchAnnouncment = new DelegateCommand(Convert));
@@ -44,7 +37,6 @@ namespace ProjectAccount
 
         public void Convert2()
         {
-            //_announcments = new List<AnnouncmentOffers>(ModelWorker2.ReturnListOffers2(_login, _filter, _type));
             _announcments = new List<AnnouncmentOffers>(ModelWorker2.FilterOffers(_login, _filter, _type));
         }
         private string _filter;
